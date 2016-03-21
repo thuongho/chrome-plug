@@ -16,7 +16,15 @@
     "persistent": false
   },
 
+  "content_scripts": [
+    {
+      "matches": ["http://pluralsight.com/training/Courses/*", "http://pluralsight.com/training/Authors/Details/*"],
+      "js": ["ps_cs.js","jquery-2.2.1.min.js"]
+    }
+  ],
+
   "permissions": [
-    "tabs"
+    "tabs",
+    "http://pluralsight.com/*"
   ]
 }
