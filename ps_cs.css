@@ -1,0 +1,9 @@
+// .author {
+//   font-weight: bolder;
+//   font-size: large;
+// }
+
+.search-result__author a {
+  font-weight: bolder;
+  font-size: large;
+}

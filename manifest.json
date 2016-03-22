@@ -18,8 +18,9 @@
 
   "content_scripts": [
     {
-      "matches": ["http://pluralsight.com/training/Courses/*", "http://pluralsight.com/training/Authors/Details/*"],
-      "js": ["ps_cs.js","jquery-2.2.1.min.js"]
+      "matches": ["https://www.pluralsight.com/search?q=*&categories=course", "http://pluralsight.com/training/Authors/Details/*"],
+      "js": ["ps_cs.js","jquery-2.2.1.min.js", "jquery.dataTables.js"],
+      "css": ["ps_cs.css"]
     }
   ],
 
