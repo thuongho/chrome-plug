@@ -5,16 +5,19 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     var hist = {};
 
     authors.map(function (a) {
-      if (a.title in hist) {
-        hist[a.title]++;
+      if (authors[a].text in hist) {
+        hist[authors[a].text]++;
       } else {
-        hist[a.title] = 1;
+        hist[authors[a].text] = 1;
       }
     });
 
+    console.log('hist', hist);
     for (var a in hist) {
       var aName = '"' + a + '"';
-      var links = $('.search-result__author a[title=' + aName + ']');
+      // var links = $('.search-result__author a[text=' + aName + ']');
+      var links = $('.search-result__author a:contains(' + aName + ')');
+      console.log('links', links);
 
       $.each(links, function (i, v) {
         v.innerText = a + ' - ' + hist[a];
